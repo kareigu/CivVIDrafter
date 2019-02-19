@@ -1,0 +1,10 @@
+C:\Users\MxR\Documents\Git\CivVIDrafter\bin\Debug\CivVIDrafter.exe.config
+C:\Users\MxR\Documents\Git\CivVIDrafter\bin\Debug\CivVIDrafter.exe
+C:\Users\MxR\Documents\Git\CivVIDrafter\bin\Debug\CivVIDrafter.pdb
+C:\Users\MxR\Documents\Git\CivVIDrafter\obj\Debug\CivVIDrafter.csprojAssemblyReference.cache
+C:\Users\MxR\Documents\Git\CivVIDrafter\obj\Debug\CivVIDrafter.Form1.resources
+C:\Users\MxR\Documents\Git\CivVIDrafter\obj\Debug\CivVIDrafter.Properties.Resources.resources
+C:\Users\MxR\Documents\Git\CivVIDrafter\obj\Debug\CivVIDrafter.csproj.GenerateResource.cache
+C:\Users\MxR\Documents\Git\CivVIDrafter\obj\Debug\CivVIDrafter.csproj.CoreCompileInputs.cache
+C:\Users\MxR\Documents\Git\CivVIDrafter\obj\Debug\CivVIDrafter.exe
+C:\Users\MxR\Documents\Git\CivVIDrafter\obj\Debug\CivVIDrafter.pdb
