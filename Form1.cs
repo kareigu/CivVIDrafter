@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace CivVIDrafter
 {
     public partial class Form1 : Form
@@ -18,9 +19,21 @@ namespace CivVIDrafter
         }
 
 
-        private void consoleLogger(string consoleBuffer)
+        private void consoleLogger(string consoleBuffer, bool newLine)
         {
-            ConsoleBox.AppendText(consoleBuffer + "\r\n");
+            if(newLine == true)
+            {
+                ConsoleBox.AppendText("\r\n" + consoleBuffer);
+            }
+            else if(newLine == false)
+            {
+                ConsoleBox.AppendText(consoleBuffer + " \n");
+            }
+            else
+            {
+                ConsoleBox.AppendText("Error logging to console \r\n");
+            }
+
         }
 
 
@@ -58,7 +71,7 @@ namespace CivVIDrafter
             }
             else
             {
-                consoleLogger("Error accessing console");
+                consoleLogger("Error accessing console", true);
             }
 
         }
@@ -76,7 +89,7 @@ namespace CivVIDrafter
         {
             Random consoleOutput = new Random();
             int sendTestData = consoleOutput.Next();
-            consoleLogger(sendTestData.ToString());
+            consoleLogger(sendTestData.ToString(), true);
         }
 
 
@@ -111,7 +124,7 @@ namespace CivVIDrafter
 
             //Show pictures of civs and send generation info to console.
             pictureBox1.Show();
-            consoleLogger("Generated civs: Pingala");
+            consoleLogger("Generated civs: ", true);
 
             //enable next button under countselectors
             PlayerCivCountSelector.Enabled = true;
@@ -119,12 +132,26 @@ namespace CivVIDrafter
 
             //disable dlc selector
             CivFilterSelector.Enabled = false;
+
+
+            //Log generated civs to console
+            civGenerator();
         }
 
+        
 
         private void civGenerator()
         {
-            string[] vanillaCivs = new string[];
+            Civs civs = new Civs();
+            civs.vanilla();
+            civs.rf();
+            civs.gs();
+            civs.dlc();
+            
+            for (int i = 0; i < 5; i++)
+            {
+                consoleLogger(civs.rfCivs[i] + ",", false);
+            }
         }
 
 
