@@ -94,6 +94,16 @@ namespace CivVIDrafter
         {
             PlayercountSelector.Enabled = false;
             PlayerCivCountSelector.Enabled = false;
+
+            //enable dlc selector
+            CivFilterSelector.Enabled = true;
+
+            //Check all options by default
+            int dlcCount = CivFilterSelector.Items.Count;
+            for(int i = dlcCount - 1; i >= 0; i--)
+            {
+                CivFilterSelector.SetItemCheckState(i, CheckState.Checked);
+            }
         }
 
         private void GenerateButton_Click(object sender, EventArgs e)
@@ -106,6 +116,15 @@ namespace CivVIDrafter
             //enable next button under countselectors
             PlayerCivCountSelector.Enabled = true;
             PlayercountSelector.Enabled = true;
+
+            //disable dlc selector
+            CivFilterSelector.Enabled = false;
+        }
+
+
+        private void civGenerator()
+        {
+            string[] vanillaCivs = new string[];
         }
 
 

@@ -45,6 +45,7 @@
             this.PlayerCivCountSelector = new System.Windows.Forms.ComboBox();
             this.PlayerCivCountSelectorLabel = new System.Windows.Forms.Label();
             this.CountSelectNextButton = new System.Windows.Forms.Button();
+            this.CivFilterSelector = new System.Windows.Forms.CheckedListBox();
             this.FileMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -234,6 +235,26 @@
             this.CountSelectNextButton.UseVisualStyleBackColor = true;
             this.CountSelectNextButton.Click += new System.EventHandler(this.CountSelectNextButton_Click);
             // 
+            // CivFilterSelector
+            // 
+            this.CivFilterSelector.CheckOnClick = true;
+            this.CivFilterSelector.Enabled = false;
+            this.CivFilterSelector.FormattingEnabled = true;
+            this.CivFilterSelector.Items.AddRange(new object[] {
+            "Vanilla",
+            "Rise & Fall",
+            "Gathering Storm",
+            "Poland",
+            "Australia",
+            "Persia & Macedon",
+            "Nubia",
+            "Khmer & Indonesia"});
+            this.CivFilterSelector.Location = new System.Drawing.Point(165, 39);
+            this.CivFilterSelector.Name = "CivFilterSelector";
+            this.CivFilterSelector.Size = new System.Drawing.Size(120, 124);
+            this.CivFilterSelector.TabIndex = 11;
+            this.CivFilterSelector.ThreeDCheckBoxes = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,6 +262,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(502, 583);
+            this.Controls.Add(this.CivFilterSelector);
             this.Controls.Add(this.CountSelectNextButton);
             this.Controls.Add(this.PlayerCivCountSelectorLabel);
             this.Controls.Add(this.PlayerCivCountSelector);
@@ -284,6 +306,7 @@
         private System.Windows.Forms.ComboBox PlayerCivCountSelector;
         private System.Windows.Forms.Label PlayerCivCountSelectorLabel;
         private System.Windows.Forms.Button CountSelectNextButton;
+        private System.Windows.Forms.CheckedListBox CivFilterSelector;
     }
 }
 
