@@ -18,6 +18,14 @@ namespace CivVIDrafter
         }
 
 
+        private void consoleLogger(string consoleBuffer)
+        {
+            ConsoleBox.AppendText(consoleBuffer + "\r\n");
+        }
+
+
+
+
 
 
         /// <summary>
@@ -50,7 +58,7 @@ namespace CivVIDrafter
             }
             else
             {
-                ConsoleBox.AppendText("Error accessign console \r\n");
+                consoleLogger("Error accessing console");
             }
 
         }
@@ -67,13 +75,43 @@ namespace CivVIDrafter
         private void FileMenuDebugAppendConsole_Click(object sender, EventArgs e)
         {
             Random consoleOutput = new Random();
-            ConsoleBox.AppendText(consoleOutput.Next(0, 255) + "\r\n");
+            int sendTestData = consoleOutput.Next();
+            consoleLogger(sendTestData.ToString());
+        }
+
+
+
+
+
+        #region Generator
+        /// <summary>
+        /// Generator code
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        private void CountSelectNextButton_Click(object sender, EventArgs e)
+        {
+            PlayercountSelector.Enabled = false;
+            PlayerCivCountSelector.Enabled = false;
         }
 
         private void GenerateButton_Click(object sender, EventArgs e)
         {
+
+            //Show pictures of civs and send generation info to console.
             pictureBox1.Show();
-            ConsoleBox.AppendText("Generated civs: Pingala \r\n");
+            consoleLogger("Generated civs: Pingala");
+
+            //enable next button under countselectors
+            PlayerCivCountSelector.Enabled = true;
+            PlayercountSelector.Enabled = true;
         }
+
+
+        #endregion
     }
 }
+
+
+

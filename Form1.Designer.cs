@@ -42,6 +42,9 @@
             this.GenerateButton = new System.Windows.Forms.Button();
             this.PlayercountSelector = new System.Windows.Forms.ComboBox();
             this.PlayercountSelectorLabel = new System.Windows.Forms.Label();
+            this.PlayerCivCountSelector = new System.Windows.Forms.ComboBox();
+            this.PlayerCivCountSelectorLabel = new System.Windows.Forms.Label();
+            this.CountSelectNextButton = new System.Windows.Forms.Button();
             this.FileMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -100,7 +103,7 @@
             // FileMenuDebugAppendConsole
             // 
             this.FileMenuDebugAppendConsole.Name = "FileMenuDebugAppendConsole";
-            this.FileMenuDebugAppendConsole.Size = new System.Drawing.Size(180, 22);
+            this.FileMenuDebugAppendConsole.Size = new System.Drawing.Size(162, 22);
             this.FileMenuDebugAppendConsole.Text = "Append Console";
             this.FileMenuDebugAppendConsole.Click += new System.EventHandler(this.FileMenuDebugAppendConsole_Click);
             // 
@@ -149,7 +152,7 @@
             this.GenerateButton.Name = "GenerateButton";
             this.GenerateButton.Size = new System.Drawing.Size(75, 23);
             this.GenerateButton.TabIndex = 4;
-            this.GenerateButton.Text = "button1";
+            this.GenerateButton.Text = "GENERATE";
             this.GenerateButton.UseVisualStyleBackColor = true;
             this.GenerateButton.Click += new System.EventHandler(this.GenerateButton_Click);
             // 
@@ -199,6 +202,38 @@
             this.PlayercountSelectorLabel.TabIndex = 7;
             this.PlayercountSelectorLabel.Text = "Playercount";
             // 
+            // PlayerCivCountSelector
+            // 
+            this.PlayerCivCountSelector.FormattingEnabled = true;
+            this.PlayerCivCountSelector.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.PlayerCivCountSelector.Location = new System.Drawing.Point(12, 80);
+            this.PlayerCivCountSelector.Name = "PlayerCivCountSelector";
+            this.PlayerCivCountSelector.Size = new System.Drawing.Size(121, 21);
+            this.PlayerCivCountSelector.TabIndex = 8;
+            this.PlayerCivCountSelector.Text = "1";
+            // 
+            // PlayerCivCountSelectorLabel
+            // 
+            this.PlayerCivCountSelectorLabel.AutoSize = true;
+            this.PlayerCivCountSelectorLabel.Location = new System.Drawing.Point(29, 64);
+            this.PlayerCivCountSelectorLabel.Name = "PlayerCivCountSelectorLabel";
+            this.PlayerCivCountSelectorLabel.Size = new System.Drawing.Size(86, 13);
+            this.PlayerCivCountSelectorLabel.TabIndex = 9;
+            this.PlayerCivCountSelectorLabel.Text = "Civilization count";
+            // 
+            // CountSelectNextButton
+            // 
+            this.CountSelectNextButton.Location = new System.Drawing.Point(32, 108);
+            this.CountSelectNextButton.Name = "CountSelectNextButton";
+            this.CountSelectNextButton.Size = new System.Drawing.Size(75, 23);
+            this.CountSelectNextButton.TabIndex = 10;
+            this.CountSelectNextButton.Text = "Next";
+            this.CountSelectNextButton.UseVisualStyleBackColor = true;
+            this.CountSelectNextButton.Click += new System.EventHandler(this.CountSelectNextButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,6 +241,9 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(502, 583);
+            this.Controls.Add(this.CountSelectNextButton);
+            this.Controls.Add(this.PlayerCivCountSelectorLabel);
+            this.Controls.Add(this.PlayerCivCountSelector);
             this.Controls.Add(this.PlayercountSelectorLabel);
             this.Controls.Add(this.PlayercountSelector);
             this.Controls.Add(this.GenerateButton);
@@ -219,7 +257,7 @@
             this.MaximumSize = new System.Drawing.Size(518, 622);
             this.MinimumSize = new System.Drawing.Size(518, 622);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Civilization VI | Civ Generator";
             this.FileMenu.ResumeLayout(false);
             this.FileMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -243,6 +281,9 @@
         private System.Windows.Forms.Button GenerateButton;
         private System.Windows.Forms.ComboBox PlayercountSelector;
         private System.Windows.Forms.Label PlayercountSelectorLabel;
+        private System.Windows.Forms.ComboBox PlayerCivCountSelector;
+        private System.Windows.Forms.Label PlayerCivCountSelectorLabel;
+        private System.Windows.Forms.Button CountSelectNextButton;
     }
 }
 
